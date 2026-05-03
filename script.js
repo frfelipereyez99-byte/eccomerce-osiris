@@ -91,4 +91,7 @@ if (modalImg) {
   });
 }function toggleMenu() {
   document.getElementById("mobileMenu").classList.toggle("active");
+}function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("active");
 }
