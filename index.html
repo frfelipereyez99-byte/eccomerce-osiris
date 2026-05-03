@@ -27,7 +27,23 @@
     </ul>
 
     <a href="https://wa.me/573222036012?text=Hola,%20quiero%20agendar%20una%20cita%20para%20mi%20mascota" class="btn" target="_blank">
-      Agendar Cita
+      Agendar Cita<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<div id="mobileMenu" class="mobile-menu">
+  <span class="close-btn" onclick="toggleMenu()">✕</span>
+
+  <a href="#inicio">Inicio</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#equipo">Equipo</a>
+  <a href="#instalaciones">Instalaciones</a>
+  <a href="galeria.html">Galería</a>
+  <a href="#contacto">Contacto</a>
+
+  <a href="https://wa.me/573222036012" class="btn-whatsapp" target="_blank">
+    💬 Agendar por WhatsApp
+  </a>
+</div>
     </a>
   </nav>
 </header>
@@ -172,36 +188,39 @@
     </div>
   </div>
 </section>
-</section><section id="instalaciones" class="instalaciones">
-  <h2>Instalaciones</h2>
-  <p class="subtexto">
-    Contamos con espacios adecuados para brindar una atención cómoda, segura y profesional.
-  </p>
+</section>
+<section id="instalaciones" class="instalaciones">
+  <h2>Nuestras Instalaciones</h2>
+  <p class="subtexto">Espacios diseñados para brindar atención cómoda, segura y profesional.</p>
 
-  <div class="carousel">
-    <div class="carousel-track">
-      <div class="slide">
-        <div class="img-placeholder"></div>
+  <div class="inst-slider">
+    <button class="inst-btn inst-prev">‹</button>
+
+    <div class="inst-track" id="instTrack">
+      <div class="inst-card">
+        <img src="img/consultorio.jpg" alt="Consultorio">
         <h3>Consultorio</h3>
       </div>
 
-      <div class="slide">
-        <div class="img-placeholder"></div>
-        <h3>Zona de atención</h3>
+      <div class="inst-card">
+        <img src="img/quirofano.jpg" alt="Quirófano">
+        <h3>Quirófano</h3>
       </div>
 
-      <div class="slide">
-        <div class="img-placeholder"></div>
-        <h3>Área de recuperación</h3>
-      </div>
-
-      <div class="slide">
-        <div class="img-placeholder"></div>
+      <div class="inst-card">
+        <img src="img/recepcion.jpg" alt="Recepción">
         <h3>Recepción</h3>
       </div>
     </div>
+
+    <button class="inst-btn inst-next">›</button>
   </div>
 </section>
+
+<div class="modal-img" id="modalImg">
+  <span id="cerrarModal">&times;</span>
+  <img id="modalFoto" src="" alt="Imagen ampliada">
+</div>
 
 <section id="preguntas">
   <h2>Preguntas Frecuentes</h2>
