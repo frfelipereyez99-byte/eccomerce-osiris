@@ -94,4 +94,23 @@ if (modalImg) {
 }function toggleMenu() {
   const menu = document.getElementById("mobileMenu");
   menu.classList.toggle("active");
+}/* FLECHAS CARRUSEL INSTALACIONES */
+const instTrack = document.getElementById("instTrack");
+const instNext = document.querySelector(".inst-next");
+const instPrev = document.querySelector(".inst-prev");
+
+if (instTrack && instNext && instPrev) {
+  instNext.addEventListener("click", () => {
+    instTrack.scrollBy({
+      left: 390,
+      behavior: "smooth"
+    });
+  });
+
+  instPrev.addEventListener("click", () => {
+    instTrack.scrollBy({
+      left: -390,
+      behavior: "smooth"
+    });
+  });
 }
