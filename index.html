@@ -3,311 +3,294 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOLEDO Veterinaria</title>
+  <title>TOLEDO Veterinaria - Cuidado Especializado</title>
+  
+  <!-- Fuente Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<header>
-  <nav>
+<header class="navbar">
+  <div class="nav-container">
     <a href="#inicio" class="logo">
       <img src="img/logo.png" alt="TOLEDO Veterinaria">
     </a>
 
-    <ul>
+    <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#porque-elegirnos">Nosotros</a></li>
       <li><a href="#instalaciones">Instalaciones</a></li>
+      <li><a href="#equipo">Equipo</a></li>
       <li><a href="#preguntas">FAQ</a></li>
       <li><a href="#contacto">Contacto</a></li>
-      <li><a href="galeria.html">Galería</a></li>
     </ul>
 
-    <a href="https://wa.me/573222036012?text=Hola,%20quiero%20agendar%20una%20cita" class="btn" target="_blank">
+    <a href="https://wa.me/573222036012?text=Hola,%20quiero%20agendar%20una%20cita" class="btn btn-primary nav-btn" target="_blank">
       Agendar Cita
     </a>
 
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-  </nav>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
+  </div>
 </header>
 
+<!-- Menú Móvil -->
 <div id="mobileMenu" class="mobile-menu">
-  <span class="close-btn" onclick="toggleMenu()">✕</span>
+  <button class="close-btn" onclick="toggleMenu()">✕</button>
   <a href="#inicio" onclick="toggleMenu()">Inicio</a>
   <a href="#servicios" onclick="toggleMenu()">Servicios</a>
-  <a href="#equipo" onclick="toggleMenu()">Equipo</a>
+  <a href="#porque-elegirnos" onclick="toggleMenu()">Por qué elegirnos</a>
   <a href="#instalaciones" onclick="toggleMenu()">Instalaciones</a>
+  <a href="#equipo" onclick="toggleMenu()">Equipo</a>
   <a href="#preguntas" onclick="toggleMenu()">FAQ</a>
   <a href="#contacto" onclick="toggleMenu()">Contacto</a>
-  <a href="galeria.html">Galería</a>
-  <a href="https://wa.me/573222036012?text=Hola,%20quiero%20agendar%20una%20cita" class="btn-whatsapp" target="_blank">
+  <a href="https://wa.me/573222036012?text=Hola,%20quiero%20agendar%20una%20cita" class="btn btn-whatsapp" target="_blank">
     💬 Agendar por WhatsApp
   </a>
 </div>
 
-<section id="inicio" class="hero">
-  <h1>El mejor cuidado clínico para tu mascota</h1>
-  <p>Centro clínico veterinario comprometido con la salud, bienestar y felicidad de perros y gatos.</p>
-
-  <div>
-    <a href="https://wa.me/573222036012" class="btn whatsapp-btn" target="_blank">
-  <span>💬</span> Agendar por WhatsApp
-</a>
-    <a href="#servicios" class="btn btn-outline">Conocer Servicios</a>
+<!-- Hero Section -->
+<section id="inicio" class="hero reveal">
+  <div class="hero-content">
+    <span class="badge">Atención Clínica de Primer Nivel</span>
+    <h1>El mejor cuidado clínico para tu mascota</h1>
+    <p>Centro clínico veterinario comprometido con la salud, bienestar y felicidad integral de perros y gatos.</p>
+    <div class="hero-buttons">
+      <a href="https://wa.me/573222036012" class="btn btn-whatsapp" target="_blank">
+        💬 Agendar por WhatsApp
+      </a>
+      <a href="#servicios" class="btn btn-outline">Conocer Servicios</a>
+    </div>
   </div>
-</section><section class="beneficios">
-  <div>🐾 Atención con amor</div>
-  <div>🩺 Personal capacitado</div>
-  <div>📍 Fácil ubicación</div>
-  <div>💬 Agenda por WhatsApp</div>
 </section>
 
-<section id="servicios">
-  <h2>Nuestros Servicios</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <img src="img/consulta.jpg" alt="Consulta Veterinaria">
-      <h3>Consulta Veterinaria</h3>
-      <p>Evaluación completa, diagnóstico y tratamiento profesional.</p>
-      <a href="https://wa.me/573222036012?text=Hola,%20quiero%20agendar%20consulta%20veterinaria" class="btn-servicio" target="_blank">Agendar</a>
-    </div>
-
-    <div class="card">
-      <img src="img/cirugia.jpg" alt="Cirugía">
-      <h3>Cirugía</h3>
-      <p>Procedimientos realizados con cuidado, seguridad y responsabilidad.</p>
-      <a href="https://wa.me/573222036012?text=Hola,%20quiero%20información%20sobre%20cirugía" class="btn-servicio" target="_blank">Agendar</a>
-    </div>
-
-    <div class="card">
-      <img src="img/vacunacion.jpg" alt="Vacunación">
-      <h3>Vacunación</h3>
-      <p>Protección preventiva para perros y gatos.</p>
-      <a href="https://wa.me/573222036012?text=Hola,%20quiero%20agendar%20vacunación" class="btn-servicio" target="_blank">Agendar</a>
-    </div>
-
-    <div class="card">
-      <img src="img/urgencias.jpg" alt="Urgencias">
-      <h3>Urgencias</h3>
-      <p>Atención rápida para situaciones que requieren prioridad.</p>
-      <a href="https://wa.me/573222036012?text=Hola,%20necesito%20atención%20de%20urgencias" class="btn-servicio" target="_blank">Agendar</a>
-    </div>
-
-    <div class="card">
-      <img src="img/grooming.jpg" alt="Grooming y Estética">
-      <h3>Grooming y Estética</h3>
-      <p>Baño, corte, limpieza y cuidado estético para tu mascota.</p>
-      <a href="https://wa.me/573222036012?text=Hola,%20quiero%20agendar%20grooming%20y%20estética" class="btn-servicio" target="_blank">Agendar</a>
-    </div>
-
-    <div class="card">
-      <img src="img/imagenes.jpg" alt="Imágenes Diagnósticas">
-      <h3>Imágenes Diagnósticas</h3>
-      <p>Apoyo diagnóstico para evaluar mejor la salud de tu mascota.</p>
-      <a href="https://wa.me/573222036012?text=Hola,%20quiero%20información%20sobre%20imágenes%20diagnósticas" class="btn-servicio" target="_blank">Consultar</a>
-    </div>
-
-    <div class="card">
-      <img src="img/petshop.jpg" alt="Pet Shop">
-      <h3>Pet Shop</h3>
-      <p>Productos, accesorios y artículos para perros y gatos.</p>
-      <a href="https://wa.me/573222036012?text=Hola,%20quiero%20información%20sobre%20Pet%20Shop" class="btn-servicio" target="_blank">Consultar</a>
-    </div>
-
+<!-- Beneficios Rápidos -->
+<section class="beneficios reveal">
+  <div class="beneficios-container">
+    <div class="beneficio-item"><span>🐾</span> Atención con amor</div>
+    <div class="beneficio-item"><span>🩺</span> Personal capacitado</div>
+    <div class="beneficio-item"><span>📍</span> Fácil ubicación</div>
+    <div class="beneficio-item"><span>💬</span> Agenda en segundos</div>
   </div>
-  <section id="porque-elegirnos" class="porque-elegirnos">
-  <h2>¿Por qué elegirnos?</h2>
-  <p class="subtexto">Cuidamos a tu mascota con amor, experiencia y atención personalizada.</p>
+</section>
+
+<!-- Servicios -->
+<section id="servicios" class="servicios section-padding reveal">
+  <div class="section-header">
+    <h2>Nuestros Servicios</h2>
+    <p>Ofrecemos atención integral con tecnología de vanguardia y profesionales dedicados.</p>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-img-wrapper"><img src="img/consulta.jpg" alt="Consulta Veterinaria"></div>
+      <div class="card-body">
+        <h3>Consulta Veterinaria</h3>
+        <p>Evaluación completa, diagnóstico preciso y tratamiento profesional.</p>
+        <a href="https://wa.me/573222036012?text=Hola,%20quiero%20agendar%20consulta" class="btn-card" target="_blank">Agendar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrapper"><img src="img/cirugia.jpg" alt="Cirugía"></div>
+      <div class="card-body">
+        <h3>Cirugía</h3>
+        <p>Procedimientos realizados con máximo cuidado, seguridad y tecnología.</p>
+        <a href="https://wa.me/573222036012?text=Hola,%20información%20sobre%20cirugía" class="btn-card" target="_blank">Agendar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrapper"><img src="img/vacunacion.jpg" alt="Vacunación"></div>
+      <div class="card-body">
+        <h3>Vacunación</h3>
+        <p>Protección preventiva y esquemas completos para perros y gatos.</p>
+        <a href="https://wa.me/573222036012?text=Hola,%20quiero%20agendar%20vacunación" class="btn-card" target="_blank">Agendar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrapper"><img src="img/urgencias.jpg" alt="Urgencias"></div>
+      <div class="card-body">
+        <h3>Urgencias</h3>
+        <p>Atención prioritaria y rápida para situaciones críticas.</p>
+        <a href="https://wa.me/573222036012?text=Hola,%20necesito%20atención%20de%20urgencias" class="btn-card" target="_blank">Agendar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrapper"><img src="img/grooming.jpg" alt="Grooming y Estética"></div>
+      <div class="card-body">
+        <h3>Grooming & Estética</h3>
+        <p>Baño, corte, limpieza e higiene profunda para el bienestar de tu mascota.</p>
+        <a href="https://wa.me/573222036012?text=Hola,%20agendar%20grooming" class="btn-card" target="_blank">Agendar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrapper"><img src="img/imagenes.jpg" alt="Imágenes Diagnósticas"></div>
+      <div class="card-body">
+        <h3>Imágenes Diagnósticas</h3>
+        <p>Estudios avanzados para evaluar de forma certera la salud interna.</p>
+        <a href="https://wa.me/573222036012?text=Hola,%20información%20diagnósticos" class="btn-card" target="_blank">Consultar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrapper"><img src="img/petshop.jpg" alt="Pet Shop"></div>
+      <div class="card-body">
+        <h3>Pet Shop</h3>
+        <p>Alimentos especializados, accesorios y artículos de la mejor calidad.</p>
+        <a href="https://wa.me/573222036012?text=Hola,%20información%20Pet%20Shop" class="btn-card" target="_blank">Consultar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Por Qué Elegirnos -->
+<section id="porque-elegirnos" class="porque-section section-padding reveal">
+  <div class="section-header">
+    <h2>¿Por qué elegirnos?</h2>
+    <p>Cuidamos a tu mascota con amor, experiencia y atención altamente personalizada.</p>
+  </div>
 
   <div class="porque-grid">
     <div class="porque-card">
-      <span>🐾</span>
+      <div class="icon-box">🐾</div>
       <h3>Atención con amor</h3>
-      <p>Tratamos a cada mascota con paciencia, respeto y cariño.</p>
+      <p>Tratamos a cada paciente con paciencia, empatía y dedicación.</p>
     </div>
-
     <div class="porque-card">
-      <span>🩺</span>
+      <div class="icon-box">🩺</div>
       <h3>Personal capacitado</h3>
-      <p>Equipo comprometido con la salud y bienestar animal.</p>
+      <p>Equipo veterinario en constante formación e innovación.</p>
     </div>
-
     <div class="porque-card">
-      <span>🏥</span>
-      <h3>Servicios completos</h3>
-      <p>Consulta, vacunas, grooming, imágenes diagnósticas y pet shop.</p>
+      <div class="icon-box">🏥</div>
+      <h3>Servicios Integrales</h3>
+      <p>Todo lo que tu mascota requiere en un solo lugar.</p>
     </div>
-
     <div class="porque-card">
-      <span>💬</span>
-      <h3>Agenda rápida</h3>
-      <p>Reserva tu cita fácilmente por WhatsApp.</p>
+      <div class="icon-box">💬</div>
+      <h3>Agendamiento Ágil</h3>
+      <p>Reserva turnos de forma cómoda e inmediata vía WhatsApp.</p>
     </div>
   </div>
 </section>
-</section><section class="testimonios">
-  <h2>Lo que dicen nuestros clientes</h2>
 
-  <div class="carousel">
-    <div class="carousel-track">
+<!-- Instalaciones -->
+<section id="instalaciones" class="instalaciones section-padding reveal">
+  <div class="section-header">
+    <h2>Nuestras Instalaciones</h2>
+    <p>Espacios modernos, limpios y diseñados para la comodidad de tu mascota.</p>
+  </div>
 
-      <div class="card">
-        <p>“Excelente atención, trataron a mi perrita con mucho amor.”</p>
-        <h3>Laura M.</h3>
-      </div>
-
-      <div class="card">
-        <p>“Muy profesionales y rápidos. Los recomiendo.”</p>
-        <h3>Carlos R.</h3>
-      </div>
-
-      <div class="card">
-        <p>“El servicio de grooming dejó hermoso a mi gato.”</p>
-        <h3>Andrea P.</h3>
-      </div>
-      <div class="card">
-        <p>“Excelente atención, trataron a mi perrita con mucho amor.”</p>
-        <h3>Laura M.</h3>
-      </div>
-
-      <div class="card">
-        <p>“Muy profesionales y rápidos. Los recomiendo.”</p>
-        <h3>Carlos R.</h3>
-      </div>
-
-      <div class="card">
-        <p>“El servicio de grooming dejó hermoso a mi gato.”</p>
-        <h3>Andrea P.</h3>
-      </div>
-
+  <div class="inst-grid">
+    <div class="inst-card">
+      <img src="img/grooming-zona.jpg" alt="Zona de Grooming">
+      <div class="inst-overlay"><h3>Zona de Grooming</h3></div>
+    </div>
+    <div class="inst-card">
+      <img src="img/consultorio.jpg" alt="Consultorio">
+      <div class="inst-overlay"><h3>Consultorios</h3></div>
+    </div>
+    <div class="inst-card">
+      <img src="img/quirofano.jpg" alt="Quirófano">
+      <div class="inst-overlay"><h3>Quirófano Equipado</h3></div>
+    </div>
+    <div class="inst-card">
+      <img src="img/recepcion.jpg" alt="Recepción">
+      <div class="inst-overlay"><h3>Recepción Cómoda</h3></div>
     </div>
   </div>
 </section>
-</section>
-<section id="instalaciones" class="instalaciones"> 
 
-  <div class="inst-wrapper">
-
-    <div class="inst-track">
-
-      <div class="inst-card">
-        <img src="img/grooming-zona.jpg">
-        <h3>Zona de Grooming</h3>
-      </div>
-
-      <div class="inst-card">
-        <img src="img/consultorio.jpg">
-        <h3>Consultorio</h3>
-      </div>
-
-      <div class="inst-card">
-        <img src="img/quirofano.jpg">
-        <h3>Quirófano</h3>
-      </div>
-
-      <div class="inst-card">
-        <img src="img/recepcion.jpg">
-        <h3>Recepción</h3>
-      </div>
-
-    </div>
-
+<!-- Equipo -->
+<section id="equipo" class="equipo section-padding reveal">
+  <div class="section-header">
+    <h2>Nuestro Equipo</h2>
+    <p>Profesionales apasionados por la salud de tu mascota.</p>
   </div>
-
-</section>
-<section id="preguntas">
-  <h2>Preguntas Frecuentes</h2>
-
-  <details>
-    <summary>¿Necesito cita previa?</summary>
-    <p>Sí, recomendamos agendar por WhatsApp para garantizar una mejor atención.</p>
-  </details>
-
-  <details>
-    <summary>¿Atienden urgencias?</summary>
-    <p>Sí, contáctanos por WhatsApp para confirmar disponibilidad.</p>
-  </details>
-
-  <details>
-    <summary>¿Atienden perros y gatos?</summary>
-    <p>Sí, brindamos atención para perros y gatos.</p>
-  </details>
-</section>
-<section id="equipo" class="equipo">
-
-  <h2>Nuestro Equipo</h2>
-  <p class="equipo-sub">
-    Profesionales comprometidos con el bienestar y la salud de tu mascota.
-  </p>
 
   <div class="equipo-grid">
-
-    <!-- Doctor 1 -->
     <div class="team-card">
       <img src="img/andres.jpg" alt="Andrés Alomia">
-
       <div class="team-info">
         <h3>Andrés Alomia</h3>
-        <span>Médico Veterinario</span>
-
-       
+        <span class="role">Médico Veterinario</span>
       </div>
     </div>
 
-    <!-- Doctor 2 -->
     <div class="team-card">
       <img src="img/paola.jpg" alt="Paola Ramírez">
-
       <div class="team-info">
         <h3>Paola Ramírez</h3>
-        <span>Auxiliar Veterinaria</span>
-
-        
+        <span class="role">Auxiliar Veterinaria</span>
       </div>
     </div>
 
-    <!-- Doctor 3 -->
     <div class="team-card">
       <img src="img/zharick.jpg" alt="Zharick Ramírez">
-
       <div class="team-info">
         <h3>Zharick Ramírez</h3>
-        <span>Groomer Profesional</span>
-
-        
-        </div>
+        <span class="role">Groomer Profesional</span>
       </div>
     </div>
+  </div>
+</section>
 
+<!-- Preguntas Frecuentes -->
+<section id="preguntas" class="faq section-padding reveal">
+  <div class="section-header">
+    <h2>Preguntas Frecuentes</h2>
+    <p>Resolvemos tus dudas principales para la atención de tu mascota.</p>
   </div>
 
+  <div class="faq-container">
+    <details>
+      <summary>¿Necesito agendar cita previa?</summary>
+      <p>Sí, recomendamos agendar con anticipación por WhatsApp para garantizar tu tiempo y evitar esperas.</p>
+    </details>
+
+    <details>
+      <summary>¿Atienden urgencias veterinarias?</summary>
+      <p>Sí, atendemos casos de urgencia. Por favor contáctanos de inmediato vía telefónica o WhatsApp para preparar la recepción.</p>
+    </details>
+
+    <details>
+      <summary>¿Qué especies reciben en la clínica?</summary>
+      <p>Nos especializamos en la atención clínica integral de perros y gatos.</p>
+    </details>
+  </div>
 </section>
-<section class="citas-pro">
-  <h2>Agenda tu cita en segundos</h2>
-  <p>Escríbenos por WhatsApp y recibe atención personalizada.</p>
 
-  <a href="https://wa.me/573222036012?text=Hola,%20quiero%20agendar%20una%20cita"
-     class="btn">
-    Agendar ahora
-  </a>
+<!-- Banner Citas -->
+<section class="cta-banner reveal">
+  <div class="cta-content">
+    <h2>Agenda la consulta de tu mascota en segundos</h2>
+    <p>Escríbenos directamente por WhatsApp y coordina tu horario ideal.</p>
+    <a href="https://wa.me/573222036012?text=Hola,%20quiero%20agendar%20una%20cita" class="btn btn-whatsapp-large" target="_blank">
+      💬 Agendar Cita Ahora
+    </a>
+  </div>
 </section>
 
-<section id="contacto" class="contacto">
-
-  <h2>Contáctanos</h2>
+<!-- Contacto -->
+<section id="contacto" class="contacto section-padding reveal">
+  <div class="section-header">
+    <h2>Ubicación y Contacto</h2>
+    <p>Visítanos en nuestra sede o comunícate con nosotros.</p>
+  </div>
 
   <div class="contacto-container">
-
-    <!-- IMAGEN -->
     <div class="contacto-img">
-      <img src="img/veterinaria.jpg" alt="Veterinaria Toledo">
+      <img src="img/veterinaria.jpg" alt="Veterinaria Toledo Fachada">
     </div>
 
-    <!-- MAPA -->
     <div class="contacto-mapa">
       <iframe 
         src="https://www.google.com/maps?q=calle+24+sur+14-82&output=embed"
@@ -315,59 +298,50 @@
         loading="lazy">
       </iframe>
     </div>
-
   </div>
-
-</section>
-</section>
 </section>
 
-<a href="https://wa.me/573222036012?text=Hola,%20quiero%20agendar%20una%20cita" class="whatsapp" target="_blank">
-  <img src="img/WhatsApp.jpg" alt="WhatsApp">
-</a>
-
-<script src="script.js"></script>
+<!-- Footer -->
 <footer class="footer">
   <div class="footer-container">
-
-    <!-- LOGO -->
     <div class="footer-col">
       <img src="img/logo.png" alt="TOLEDO Veterinaria" class="footer-logo">
-      <p>Centro clínico veterinario comprometido con la salud y bienestar de tu mascota.</p>
+      <p>Centro clínico veterinario enfocado en la salud y felicidad de tus mascotas.</p>
     </div>
 
-    <!-- CONTACTO -->
     <div class="footer-col">
       <h3>Contacto</h3>
       <p>📍 Calle 24 sur #14-82</p>
-      <p>🕒 Lunes a sábado</p>
-      <p>10:00 AM - 7:00 PM</p>
-      <p>📞 322 203 6012</p>
+      <p>🕒 Lunes a Sábado: 10:00 AM - 7:00 PM</p>
+      <p>📞 +57 322 203 6012</p>
     </div>
 
-    <!-- SERVICIOS -->
     <div class="footer-col">
       <h3>Servicios</h3>
-      <p>Consulta veterinaria</p>
-      <p>Cirugía</p>
-      <p>Vacunación</p>
-      <p>Grooming y estética</p>
-      <p>Imágenes diagnósticas</p>
+      <p>• Consulta General</p>
+      <p>• Cirugías y Vacunación</p>
+      <p>• Grooming & Estética</p>
+      <p>• Imágenes Diagnósticas</p>
     </div>
 
-    <!-- WHATSAPP -->
     <div class="footer-col">
-      <h3>Agenda</h3>
-      <a href="https://wa.me/573222036012" target="_blank" class="footer-btn">
-        💬 Escribir por WhatsApp
+      <h3>Atención Rápida</h3>
+      <a href="https://wa.me/573222036012" target="_blank" class="btn btn-whatsapp-footer">
+        💬 Agendar por WhatsApp
       </a>
     </div>
-
   </div>
 
   <div class="footer-bottom">
-    © 2025 TOLEDO Veterinaria | Todos los derechos reservados
+    <p>&copy; 2026 TOLEDO Veterinaria | Todos los derechos reservados.</p>
   </div>
 </footer>
+
+<!-- Botón Flotante WhatsApp -->
+<a href="https://wa.me/573222036012?text=Hola,%20quiero%20agendar%20una%20cita" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<script src="script.js"></script>
 </body>
 </html>
