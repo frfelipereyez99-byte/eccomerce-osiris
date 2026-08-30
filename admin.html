@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | OSIRIS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+
+  <main class="admin-layout">
+    <!-- BARRA LATERAL -->
+    <aside class="admin-sidebar">
+      <div class="brand">
+        <h1>OSIRIS</h1>
+        <span>ADMIN DASHBOARD</span>
+      </div>
+      <nav class="admin-nav">
+        <a href="index.html" class="nav-item">&larr; Volver a la Tienda</a>
+        <a href="#" class="nav-item active">Gestión de Pedidos</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <section class="admin-content">
+      <header class="admin-header">
+        <div>
+          <span>GESTIÓN COMERCIAL</span>
+          <h2>Panel de Control de Pedidos</h2>
+        </div>
+        <button id="btn-limpiar-pedidos" class="btn-danger">Limpiar Registros</button>
+      </header>
+
+      <!-- TARJETAS DE ESTADÍSTICAS -->
+      <div class="admin-stats-grid">
+        <div class="stat-card">
+          <span>Pedidos Totales</span>
+          <strong id="total-pedidos">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Ingresos Totales</span>
+          <strong id="total-ventas">$0 COP</strong>
+        </div>
+        <div class="stat-card">
+          <span>Pendientes</span>
+          <strong id="total-pendientes">0</strong>
+        </div>
+      </div>
+
+      <!-- LISTADO DE PEDIDOS -->
+      <div class="orders-section">
+        <h3>Listado de Pedidos Recibidos</h3>
+        <div id="lista-pedidos" class="lista-pedidos">
+          <!-- Inyectado desde js/admin.js o admin.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- Scripts del panel de administración -->
+  <script src="js/firebase.js"></script>
+  <script src="js/autch.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

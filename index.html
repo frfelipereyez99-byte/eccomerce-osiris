@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSIRIS STREETWEAR</title>
+  
+  <!-- Fuentes Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Hoja de Estilos Externa -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- SDK de Mercado Pago -->
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <header class="navbar">
+    <a href="#hero" class="brand-logo">OSIRIS</a>
+    <ul class="nav-links">
+      <li><a href="#gorras">GORRAS</a></li>
+      <li><a href="#gafas">GAFAS TECH</a></li>
+      <li><a href="#accesorios">ACCESORIOS</a></li>
+      <li><a href="#women">WOMEN</a></li>
+    </ul>
+    
+    <div class="header-actions">
+      <button class="cart-btn" id="cart-btn" aria-label="Ver Carrito" onclick="toggleCart()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PORTADA ORIGINAL (HERO) -->
+  <section class="hero-section" id="hero">
+    <div class="hero-content">
+      <span class="hero-tag">NEW COLLECTION 2026</span>
+      <h1 class="hero-title">OSIRIS STREETWEAR</h1>
+      <p class="hero-description">Edición exclusiva con acabados premium, gafas cyberpunk y diseño urbano.</p>
+      <a href="#gorras" class="btn-main">EXPLORAR TIENDA</a>
+    </div>
+  </section>
+
+  <!-- CONTENEDOR PRINCIPAL DE PRODUCTOS SOBRE FONDO NEGRO Y MAR -->
+  <div class="products-ocean-section">
+    
+    <!-- SECCIÓN 1: GORRAS -->
+    <section class="products-container" id="gorras">
+      <div class="section-header">
+        <span class="section-subtitle">HEADWEAR</span>
+        <h2 class="section-title">GORRAS EXCLUSIVAS</h2>
+      </div>
+
+      <div class="product-grid">
+        <!-- GORRA 1 -->
+        <article class="product-card">
+          <div class="product-image-box">
+            <img src="img/gorra 1.jpg" alt="Gorra Osiris Deep Blue">
+          </div>
+          <span class="product-status">RECIÉN LLEGADO</span>
+          <h3 class="product-name">Gorra Osiris Deep Blue</h3>
+          <p class="product-category">Colección Mar Oscuro</p>
+          <div class="product-footer">
+            <span class="product-price">$120.000 COP</span>
+            <button class="btn-buy" onclick="addToCart('gorra-01', 'Gorra Osiris Deep Blue', 120000, 'img/gorra 1.jpg')">
+              Comprar
+            </button>
+          </div>
+        </article>
+
+        <!-- GORRA 2 -->
+        <article class="product-card">
+          <div class="product-image-box">
+            <img src="img/gorra 2.jpg" alt="Gorra Snapback Midnight">
+          </div>
+          <span class="product-status status-hot">MÁS VENDIDO</span>
+          <h3 class="product-name">Gorra Snapback Midnight</h3>
+          <p class="product-category">Edición Limitada</p>
+          <div class="product-footer">
+            <span class="product-price">$135.000 COP</span>
+            <button class="btn-buy" onclick="addToCart('gorra-02', 'Gorra Snapback Midnight', 135000, 'img/gorra 2.jpg')">
+              Comprar
+            </button>
+          </div>
+        </article>
+
+        <!-- GORRA 3 -->
+        <article class="product-card">
+          <div class="product-image-box">
+            <img src="img/gorra 3.jpg" alt="Gorra Abyss Stealth">
+          </div>
+          <span class="product-status status-special">EDICIÓN ESPECIAL</span>
+          <h3 class="product-name">Gorra Abyss Stealth</h3>
+          <p class="product-category">Colección Mar Oscuro</p>
+          <div class="product-footer">
+            <span class="product-price">$150.000 COP</span>
+            <button class="btn-buy" onclick="addToCart('gorra-03', 'Gorra Abyss Stealth', 150000, 'img/gorra 3.jpg')">
+              Comprar
+            </button>
+          </div>
+        </article>
+
+        <!-- GORRA 4 -->
+        <article class="product-card">
+          <div class="product-image-box">
+            <img src="img/gorra 4.jpg" alt="Gorra Osiris Cyber Navy">
+          </div>
+          <span class="product-status">NUEVO DROP</span>
+          <h3 class="product-name">Gorra Osiris Cyber Navy</h3>
+          <p class="product-category">Colección Urbana</p>
+          <div class="product-footer">
+            <span class="product-price">$125.000 COP</span>
+            <button class="btn-buy" onclick="addToCart('gorra-04', 'Gorra Osiris Cyber Navy', 125000, 'img/gorra 4.jpg')">
+              Comprar
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: GAFAS FUTURISTAS -->
+    <section class="products-container section-margin" id="gafas">
+      <div class="section-header">
+        <span class="section-subtitle">EYEWEAR TECH</span>
+        <h2 class="section-title">GAFAS CYBERPUNK</h2>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-image-box">
+            <img src="img/lentes1.jpg" alt="Gafas Penny Carbon Torch">
+          </div>
+          <span class="product-status status-hot">TOP DROPS</span>
+          <h3 class="product-name">Gafas Penny Carbon Torch</h3>
+          <p class="product-category">Lentes Ruby / Marco Titanium</p>
+          <div class="product-footer">
+            <span class="product-price">$25.000 COP</span>
+            <button class="btn-buy" onclick="addToCart('gafas-01', 'Gafas Penny Carbon Torch', 25000, 'img/lentes1.jpg')">Comprar</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image-box">
+            <img src="img/lentes2.jpg" alt="Gafas Juliet Stealth Black">
+          </div>
+          <span class="product-status status-special">EXCLUSIVO</span>
+          <h3 class="product-name">Gafas Stealth Black</h3>
+          <p class="product-category">Marco Mate Metalizado</p>
+          <div class="product-footer">
+            <span class="product-price">$25.000 COP</span>
+            <button class="btn-buy" onclick="addToCart('gafas-02', 'Gafas Stealth Black', 25000, 'img/lentes2.jpg')">Comprar</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image-box">
+            <img src="img/lentes3.jpg" alt="Gafas X-Metal Deep Ocean">
+          </div>
+          <span class="product-status">NUEVO DROP</span>
+          <h3 class="product-name">Gafas X-Metal Deep Ocean</h3>
+          <p class="product-category">Lentes Polarizadas Cyan</p>
+          <div class="product-footer">
+            <span class="product-price">$25.000 COP</span>
+            <button class="btn-buy" onclick="addToCart('gafas-03', 'Gafas X-Metal Deep Ocean', 25000, 'img/lentes3.jpg')">Comprar</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image-box">
+            <img src="img/lentes4.jpg" alt="Gafas Cyber Viper Chrome">
+          </div>
+          <span class="product-status status-hot">TENDENCIA</span>
+          <h3 class="product-name">Gafas Cyber Viper Chrome</h3>
+          <p class="product-category">Estilo Urbano Cyber</p>
+          <div class="product-footer">
+            <span class="product-price">$25.000 COP</span>
+            <button class="btn-buy" onclick="addToCart('gafas-04', 'Gafas Cyber Viper Chrome', 25000, 'img/lentes4.jpg')">Comprar</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: ACCESORIOS STREETWEAR -->
+    <section class="products-container section-margin" id="accesorios">
+      <div class="section-header">
+        <span class="section-subtitle">DETAILS & STUFF</span>
+        <h2 class="section-title">ACCESORIOS</h2>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-image-box">
+            <img src="img/pocillos.jpg" alt="Pocillo Spiderman">
+          </div>
+          <span class="product-status">STREETWEAR</span>
+          <h3 class="product-name">Pocillo Spiderman</h3>
+          <p class="product-category">Accesorios</p>
+          <div class="product-footer">
+            <span class="product-price">$25.000 COP</span>
+            <button class="btn-buy" onclick="addToCart('acc-01', 'Pocillo Spiderman', 25000, 'img/pocillos.jpg')">Comprar</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image-box">
+            <img src="img/gorros.jpg" alt="Gorros Street Tactical">
+          </div>
+          <span class="product-status status-hot">MÁS VENDIDO</span>
+          <h3 class="product-name">Gorros Street Tactical</h3>
+          <p class="product-category">Gorros</p>
+          <div class="product-footer">
+            <span class="product-price">$25.000 COP</span>
+            <button class="btn-buy" onclick="addToCart('acc-02', 'Gorros Street Tactical', 25000, 'img/gorros.jpg')">Comprar</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image-box">
+            <img src="img/reloges.jpg" alt="Reloj Cyber Shield">
+          </div>
+          <span class="product-status status-special">EDICIÓN ESPECIAL</span>
+          <h3 class="product-name">Reloj Cyber Shield</h3>
+          <p class="product-category">Acero Titanio Negro</p>
+          <div class="product-footer">
+            <span class="product-price">$65.000 COP</span>
+            <button class="btn-buy" onclick="addToCart('acc-03', 'Reloj Cyber Shield', 65000, 'img/reloges.jpg')">Comprar</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: COLECCIÓN MUJER / UNISEX -->
+    <section class="products-container section-margin" id="women">
+      <div class="section-header">
+        <span class="section-subtitle">FEMME & UNISEX</span>
+        <h2 class="section-title">COLECCIÓN WOMEN</h2>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-image-box">
+            <img src="img/woman 1.jpg" alt="Top Osiris Dark Crop">
+          </div>
+          <span class="product-status">NUEVA COLECCIÓN</span>
+          <h3 class="product-name">Top Osiris Dark Crop</h3>
+          <p class="product-category">Estilo Urbano Fit</p>
+          <div class="product-footer">
+            <span class="product-price">$95.000 COP</span>
+            <button class="btn-buy" onclick="addToCart('wom-01', 'Top Osiris Dark Crop', 95000, 'img/woman 1.jpg')">Comprar</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image-box">
+            <img src="img/woman 2.jpg" alt="Gorra Osiris Pink Cyber">
+          </div>
+          <span class="product-status status-hot">TENDENCIA</span>
+          <h3 class="product-name">Gorra Osiris Pink Cyber</h3>
+          <p class="product-category">Edición Especial Women</p>
+          <div class="product-footer">
+            <span class="product-price">$125.000 COP</span>
+            <button class="btn-buy" onclick="addToCart('wom-02', 'Gorra Osiris Pink Cyber', 125000, 'img/woman 2.jpg')">Comprar</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image-box">
+            <img src="img/woman 3.jpg" alt="Gafas Slim Cat Cyber">
+          </div>
+          <span class="product-status status-special">EXCLUSIVO</span>
+          <h3 class="product-name">Gafas Slim Cat Cyber</h3>
+          <p class="product-category">Lentes Espejadas Futurist</p>
+          <div class="product-footer">
+            <span class="product-price">$165.000 COP</span>
+            <button class="btn-buy" onclick="addToCart('wom-03', 'Gafas Slim Cat Cyber', 165000, 'img/woman 3.jpg')">Comprar</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- PIE DE PÁGINA (FOOTER PROFESIONAL) -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>OSIRIS STREETWEAR</h3>
+        <p>Exclusividad, cultura urbana y diseño futurista en Colombia.</p>
+      </div>
+      <div class="footer-links">
+        <h4>NAVEGACIÓN</h4>
+        <a href="#gorras">Gorras</a>
+        <a href="#gafas">Gafas Tech</a>
+        <a href="#accesorios">Accesorios</a>
+        <a href="#women">Colección Women</a>
+      </div>
+      <div class="footer-info">
+        <h4>ENVÍOS & SOPORTE</h4>
+        <p>📦 Envíos a toda Colombia</p>
+        <p>🔒 Pago 100% seguro contra entrega o transferencia</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 OSIRIS STREETWEAR. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- FONDO OSCURO (OVERLAY) -->
+  <div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
+
+  <!-- PANEL LATERAL DEL CARRITO -->
+  <aside id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>TU CARRITO</h3>
+      <button class="close-btn" onclick="toggleCart()">&times;</button>
+    </div>
+
+    <!-- CONTENEDOR CON SCROLL INTERNO -->
+    <div class="cart-scroll-area">
+      <!-- LISTA DE PRODUCTOS (MITAD SUPERIOR) -->
+      <div id="cart-items" class="cart-body"></div>
+
+      <!-- DATOS Y FORMULARIO (MITAD INFERIOR / AL FINAL) -->
+      <div class="cart-checkout-section">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cart-total-price">$0 COP</span>
+        </div>
+
+        <form id="checkout-form" class="checkout-form">
+          <h4>DATOS PARA ENVÍO Y PAGO</h4>
+          <div class="form-group">
+            <input type="text" id="cust-name" placeholder="Nombre completo" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="cust-email" placeholder="Correo electrónico" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="cust-phone" placeholder="Teléfono / Celular" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="cust-city" placeholder="Ciudad / Municipio" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="cust-address" placeholder="Dirección de entrega" required>
+          </div>
+          <div class="form-group">
+            <select id="cust-payment" required>
+              <option value="" disabled selected>Selecciona método de pago</option>
+              <option value="mercadopago">Mercado Pago (Tarjeta, PSE, Efecty)</option>
+              <option value="contraentrega">Pago Contraentrega / WhatsApp</option>
+            </select>
+          </div>
+
+          <button type="submit" id="pay-btn" class="btn-checkout">
+            Procesar Pedido
+          </button>
+        </form>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Scripts de la tienda -->
+  <script src="js/carrito.js"></script>
+</body>
+</html>
