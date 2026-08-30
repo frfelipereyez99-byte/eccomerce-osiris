@@ -1,0 +1,35 @@
+# 🛍️ Osiris Streetwear — E-Commerce Web & Payment API
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.111.0-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E.svg?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Mercado Pago](https://img.shields.io/badge/Mercado%20Pago-API%20v3-009EE3.svg?logo=mercadopago&logoColor=white)](https://www.mercadopago.com.co/developers)
+
+Plataforma e-commerce Full Stack orientada al sector streetwear y moda urbana. El sistema integra un catálogo interactivo en el cliente con carrito de compras dinámico y un backend desarrollado en **FastAPI** para la orquestación segura de pagos a través de **Mercado Pago API** y procesamiento directo de órdenes mediante **WhatsApp Checkout**.
+
+---
+
+## ✨ Características Clave
+
+- 🛒 **Carrito de Compras Interactivo:** Gestión dinámica de productos, cálculo automático de subtotales, totales y control de cantidades en tiempo real.
+- 💳 **Integración con Mercado Pago API:** Generación de preferencias de pago (*Checkout Pro*) utilizando tokens de acceso seguros desde el servidor.
+- 📱 **Checkout mediante WhatsApp:** Mapeo de datos del cliente y pedido formateado dinámicamente para envío instantáneo a la línea oficial de atención.
+- 🎨 **Diseño Responsive & UI Moderna:** Interfaz optimizada con CSS Grid/Flexbox, paneles laterales deslizantes y adaptable a dispositivos móviles.
+- 🔒 **Manejo Seguro de CORS y Payload:** Restricción de dominios cruzados y validación rigurosa de estructuras de datos utilizando **Pydantic**.
+
+---
+
+## 🏗️ Arquitectura del Sistema
+
+```text
+[ Cliente Web (HTML5/CSS3/JS ES6+) ]
+           │
+           ├─── (1) Enviar Orden vía Formulario ───► [ WhatsApp API (wa.me) ]
+           │
+           └─── (2) POST /create-preference ──────► [ Backend FastAPI (Python) ]
+                                                            │
+                                                            ▼ (OAuth / Access Token)
+                                                   [ Mercado Pago API ]
+                                                            │
+                                                            ▼ (Retorna init_point)
+[ Cliente Redirigido a Pasarela de Pago ] ◄─────────────────┘
